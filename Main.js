@@ -61,3 +61,8 @@ function hideText(event) {
   text.style.display = "none";
 }
 
+function clearText() {
+    document.getElementById("enter-name-textbox").value = "";
+    document.getElementById("enter-phone-textbox").value = "";
+    alert("Details submitted!");
+}
