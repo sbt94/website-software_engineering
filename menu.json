@@ -1,0 +1,100 @@
+[
+    {
+      "category": "Appetizers",
+      "items": [
+        {
+          "name": "Tuscan Tomato & Basil Bisque",
+          "price": 12.90,
+          "img": "css/Soup.jpg",
+          "description": "Immerse yourself in a burst of Italian flavors with our rich, creamy Tuscan Tomato & Basil Bisque."
+        },
+        {
+          "name": "Classic Italian Bruschetta",
+          "price": 15.80,
+          "img": "css/Bruschetta.jpg",
+          "description": "Experience the vibrant flavors of Italy with our Classic Italian Bruschetta."
+        },
+        {
+          "name": "Fiery Buffalo Hot Wings",
+          "price": 18.10,
+          "img": "css/Wings.jpg",
+          "description": "Turn up the heat with our Fiery Buffalo Hot Wings."
+        }
+      ]
+    },
+    {
+      "category": "Main Course",
+      "items": [
+        {
+          "name": "Honey-Glazed Grilled Salmon",
+          "price": 23.50,
+          "img": "css/Salmon.jpg",
+          "description": "Indulge in our Honey-Glazed Grilled Salmon, the star of our main course selections."
+        },
+        {
+          "name": "Signature Gourmet Hamburger",
+          "price": 30.90,
+          "img": "css/Burger.jpeg",
+          "description": "Take a bite of our Signature Gourmet Hamburger and be transported into a world of bold, hearty flavors."
+        },
+        {
+          "name": "Neapolitan-Style Margherita Pizza",
+          "price": 25.30,
+          "img": "css/Pizza.jpg",
+          "description": "Experience authentic Italian flavors with our Neapolitan-Style Margherita Pizza."
+        }
+      ]
+    },
+    {
+      "category": "Drinks",
+      "items": [
+        {
+          "name": "Cabernet Sauvignon",
+          "price": 8.00,
+          "img": "css/Red_Wine.jpg",
+          "description": "A full-bodied red wine with a character of black currant, plum, and cherry notes."
+        },
+        {
+          "name": "Chardonnay",
+          "price": 8.00,
+          "img": "css/Chardonnay.jpg",
+          "description": "Crisp and refreshing white wine with notes of apple, pear, and a hint of oak."
+        }
+      ]
+    },
+    {
+      "category": "Soft Drinks",
+      "items": [
+        {
+          "name": "Coca-Cola",
+          "price": 2.00,
+          "img": "css/Cola.jpg",
+          "description": "Classic Coca-Cola, chilled and refreshing."
+        },
+        {
+          "name": "Sprite",
+          "price": 2.00,
+          "img": "css/Sprite.jpg",
+          "description": "Refreshing and crisp Sprite, perfect for a quick thirst quencher."
+        }
+      ]
+    },
+    {
+      "category": "Desserts",
+      "items": [
+        {
+          "name": "Classic New York Cheesecake",
+          "price": 8.50,
+          "img": "css/Cheesecake.jpg",
+          "description": "A creamy, silky-smooth classic New York cheesecake served with a tangy raspberry coulis."
+        },
+        {
+          "name": "Classic Tiramisu",
+          "price": 9.50,
+          "img": "css/Tiramisu.jpg",
+          "description": "A slice of heaven layered with creamy mascarpone and espresso-soaked ladyfingers, dusted with a rich cocoa topping."
+        }
+      ]
+    }
+  ]
+  

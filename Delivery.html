@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Menu</title>
+    <link rel="stylesheet" type="text/css" href="css/Menu.css" />
+    <script src="Main.js"></script> 
+  </head>
+  <body>
+    <div id="container">
+        <div id="menu">
+            <ul class="menu-list">
+                <a href="Main.html"><div class="image-container"><img src="css/logo.jpeg" alt="logo" id="logo"></div></a>
+                <a href="Contact.html"><div class="image-container"><img src="css/contact.jpg" alt="contact" id="contact"><span class="image-text">Contact</span></div></a>
+                <a href="OrderTable.html"><div class="image-container"><img src="css/order_table.jpg" alt="order table" id="order_table"><span class="image-text">Order table</span></div></a>
+                <a href="Delivery.html"><div class="image-container"><img src="css/delivery.jpg" alt="delivery" id="delivery"><span class="image-text">Delivery</span></div></a>    
+                <a href="Cart.html"><div class="image-container"><img src="css/cart.jpg" alt="cart" id="cart"><span class="image-text">Cart</span></div></a>
+                <a href="Menu.html"><div class="image-container"><img src="css/menu.jpg" alt="menu_" id="menu_"><span class="image-text">Menu</span></div></a>
+                <a href="Recommendations.html"><div class="image-container"><img src="css/Recommendations.jpg" alt="Recommendations" id="Recommendations"><span class="image-text">Recommendations</span></div></a>
+            </ul>
+        </div>
+    </div>
+    <script>
+      fetch('menu.json') 
+        .then(response => response.json())
+        .then(menu => {
+          const menuContainer = document.getElementById('menu');
+          menu.forEach(category => {
+            // Create category heading
+            const heading = document.createElement('h2');
+            heading.classList.add('menu-group-heading');
+            heading.textContent = category.category;
+            menuContainer.appendChild(heading);
+
+            const group = document.createElement('div');
+            group.classList.add('menu-group');
+
+            // Create each menu item
+            category.items.forEach(item => {
+              const menuItem = document.createElement('div');
+              menuItem.classList.add('menu-item');
+
+              const img = document.createElement('img');
+              img.src = item.img;
+              img.alt = item.name;
+              img.classList.add('menu-item-img');
+              menuItem.appendChild(img);
+
+              const textContainer = document.createElement('div');
+              textContainer.classList.add('menu-item-text');
+              menuItem.appendChild(textContainer);
+
+              const heading = document.createElement('h3');
+              heading.classList.add('menu-item-heading');
+              textContainer.appendChild(heading);
+
+              const name = document.createElement('span');
+              name.classList.add('menu-item-name');
+              name.textContent = item.name;
+              heading.appendChild(name);
+
+              const price = document.createElement('span');
+              price.classList.add('menu-item-price');
+              price.textContent = '$' + item.price.toFixed(2);
+              heading.appendChild(price);
+
+              const desc = document.createElement('p');
+              desc.classList.add('menu-item-desc');
+              desc.textContent = item.description;
+              textContainer.appendChild(desc);
+
+              const button = document.createElement('button');
+              button.textContent = 'Add to Cart';
+              button.addEventListener('click', () => itemClicked(item.name));
+              textContainer.appendChild(button);
+
+              group.appendChild(menuItem);
+            });
+
+            menuContainer.appendChild(group);
+          });
+        });
+
+      function itemClicked(itemName) {
+        alert('You added ' + itemName + ' to your cart.');
+        // Add code here to actually add the item to the user's cart.
+      }
+    </script>
+  </body>
+</html>
