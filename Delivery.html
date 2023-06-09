@@ -72,7 +72,7 @@
 
               const button = document.createElement('button');
               button.textContent = 'Add to Cart';
-              button.addEventListener('click', () => itemClicked(item.name));
+              button.addEventListener('click', () => itemClicked(item));
               textContainer.appendChild(button);
 
               group.appendChild(menuItem);
@@ -80,12 +80,29 @@
 
             menuContainer.appendChild(group);
           });
+        })
+        .catch(error => console.error('Error:', error));
+
+      function itemClicked(item) {
+        alert('You added ' + item.name + ' to your cart.');
+
+
+        fetch("http://localhost/db.php", {
+            mode: 'no-cors',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(item),
+        })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch((error) => {
+            console.error('Error:', error);
         });
 
-      function itemClicked(itemName) {
-        alert('You added ' + itemName + ' to your cart.');
-        // Add code here to actually add the item to the user's cart.
       }
     </script>
   </body>
 </html>
+
