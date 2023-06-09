@@ -25,3 +25,5 @@ function clearText() {
     document.getElementById("enter-phone-textbox").value = "";
     alert("Details submitted!");
 }
+
+

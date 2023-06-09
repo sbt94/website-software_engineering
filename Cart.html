@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Nadav's diner" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Cart</title>
+    <link rel="stylesheet" type="text/css" href="css/Menu.css" />
+    <script src="Main.js"></script> 
+  </head>
+  <body>
+    <div id="container">
+        <div id="menu">
+            <ul class="menu-list">
+                <a href="Main.html"><div class="image-container"><img src="css/logo.jpeg" alt="logo" id="logo"></div></a>
+                <a href="Contact.html"><div class="image-container"><img src="css/contact.jpg" alt="contact" id="contact"><span class="image-text">Contact</span></div></a>
+                <a href="OrderTable.html"><div class="image-container"><img src="css/order_table.jpg" alt="order table" id="order_table"><span class="image-text">Order table</span></div></a>
+                <a href="Delivery.html"><div class="image-container"><img src="css/delivery.jpg" alt="delivery" id="delivery"><span class="image-text">Delivery</span></div></a>    
+                <a href="Cart.html"><div class="image-container"><img src="css/cart.jpg" alt="cart" id="cart"><span class="image-text">Cart</span></div></a>
+                <a href="Menu.html"><div class="image-container"><img src="css/menu.jpg" alt="menu_" id="menu_"><span class="image-text">Menu</span></div></a>
+                <a href="Recommendations.html"><div class="image-container"><img src="css/Recommendations.jpg" alt="Recommendations" id="Recommendations"><span class="image-text">Recommendations</span></div></a>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="menu">
+     <!-- read from mysql database and display the cart items -->
+     <script>
+        fetch('http://localhost/db_get.php')
+        .then(response => response.json())
+        .then(data => {
+            // get a reference to the parent container where you want to append your items
+            const menuContainer = document.getElementById('menu');
+            menuContainer.classList.add('menu-group-heading');
+            // loop through the data and create DOM elements for each item
+            data.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('menu-item-text');
+
+            const nameElement = document.createElement('h3');
+            nameElement.textContent = item.name;
+            itemDiv.appendChild(nameElement);
+
+            const priceElement = document.createElement('p');
+            priceElement.textContent = `Price: $${item.price}`;
+            itemDiv.appendChild(priceElement);
+
+            // append the item to the parent container
+            menuContainer.appendChild(itemDiv);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+
+        function deleteItems() {
+            fetch("http://localhost/db_remove.php", {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(),
+            })
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+     </script>
+    </div>
+  
+  </body>
+</html>
