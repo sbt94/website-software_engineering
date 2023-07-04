@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $servername = "database-1.ceng9favarfc.us-east-1.rds.amazonaws.com";
     $username = "admin";
-    $password = "";
+    $password = "ruppin1234";
     $dbname = "Nadav_Diner";
 
     //create connection
