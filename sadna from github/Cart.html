@@ -25,7 +25,7 @@
       <div id="menu">
           <!-- read from mysql database and display the cart items -->
           <script>
-              fetch('http://localhost/db_get.php')
+              fetch('http://34.239.35.228/db_get.php')
                   .then(response => response.json())
                   .then(data => {
                       // get a reference to the parent container where you want to append your items
@@ -51,7 +51,7 @@
                   .catch(error => console.error('Error:', error));
 
               function deleteItems() {
-                  fetch("http://localhost/db_remove.php", {
+                  fetch("http://34.239.35.228/db_remove.php", {
                       method: 'DELETE',
                       headers: {
                           'Content-Type': 'application/json',
