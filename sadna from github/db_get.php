@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 // database connection parameters
-$servername = "database-website.cco4ga0zip5p.us-east-1.rds.amazonaws.com";
+$servername = "database-1.ceng9favarfc.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "ruppin1234";
 $dbname = "Nadav_Diner";

@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
 
 // database connection parameters
-$servername = "database-website.cco4ga0zip5p.us-east-1.rds.amazonaws.com";
+$servername = "database-1.ceng9favarfc.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "ruppin1234";
 $dbname = "Nadav_Diner";

@@ -3,10 +3,21 @@ header('Access-Control-Allow-Origin: *');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $item = json_decode(file_get_contents('php://input'), true);
 
-    $servername = "database-website.cco4ga0zip5p.us-east-1.rds.amazonaws.com";
+    // $servername = "database-website.cco4ga0zip5p.us-east-1.rds.amazonaws.com";
+    // $username = "admin";
+    // $password = "ruppin1234";
+    // $dbname = "Nadav_Diner";
+
+    // $servername = "sql304.byethost7.com";
+    // $username = "b7_34388903";
+    // $password = "tziyunKAL";
+    // $dbname = "b7_34388903_db";
+
+    $servername = "database-1.ceng9favarfc.us-east-1.rds.amazonaws.com";
     $username = "admin";
-    $password = "ruppin1234";
+    $password = "";
     $dbname = "Nadav_Diner";
+
     //create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     //check connection  

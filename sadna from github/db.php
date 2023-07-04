@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $item = json_decode(file_get_contents('php://input'), true);
 
-    $servername = "database-website.cco4ga0zip5p.us-east-1.rds.amazonaws.com";
+    $servername = "database-1.ceng9favarfc.us-east-1.rds.amazonaws.com";
     $username = "admin";
     $password = "ruppin1234";
     $dbname = "Nadav_Diner";
