@@ -26,8 +26,11 @@
                 <label for="phone">Phone<span class="required">*</span>:</label>
                 <input type="text" id="phone" required>
 
-                <label for="date-time">Date and Time<span class="required">*</span>:</label>
-                <input type="text" id="date-time" required>
+                <label for="date">Date<span class="required">*</span>:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Time<span class="required">*</span>:</label>
+                <input type="time" id="time" required>
 
                 <label for="party-size">Party Size<span class="required">*</span>:</label>
                 <select id="party-size" required>
