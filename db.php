@@ -28,13 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare an SQL statement
     $stmt = $conn->prepare("INSERT INTO orders (name, price, img, description, customerID) VALUES (?, ?, ?, ?, ?)");
     // Bind parameters to the SQL statement
-    $stmt->bind_param("sdss", $item['name'], $item['price'], $item['img'], $item['description'], $item['customerID']);
+    $stmt->bind_param("sdsss", $item['name'], $item['price'], $item['img'], $item['description'], $item['customerID']);
 
     // Execute the prepared SQL statement
     if ($stmt->execute()) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
     // Close the database connection
