@@ -8,6 +8,7 @@
     <script src="Main.js"></script> 
   </head>
   <body>
+  <script src="path_to_your_js_file/customerID.js"></script>
     <div id="container">
       <?php include 'menu.php'; ?>
     </div>
@@ -77,6 +78,14 @@
       function itemClicked(item) {
         alert('You added ' + item.name + ' to your cart.');
 
+            // Retrieve the customer ID from local storage
+        var customerID = localStorage.getItem('customerID');
+
+          // Create a new object that includes the item data and the customer ID
+        var dataToSend = {
+            ...item,
+             customerID: customerID
+            };
 
         fetch("db.php", {
             mode: 'no-cors',
@@ -84,7 +93,7 @@
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(item),
+            body: JSON.stringify(dataToSend),
         })
         .then(response => response.text())
         .then(data => console.log(data))

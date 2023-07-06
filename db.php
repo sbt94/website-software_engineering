@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare an SQL statement
-    $stmt = $conn->prepare("INSERT INTO items (name, price, img, description) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO orders (name, price, img, description, customerID) VALUES (?, ?, ?, ?, ?)");
     // Bind parameters to the SQL statement
-    $stmt->bind_param("sdss", $item['name'], $item['price'], $item['img'], $item['description']);
+    $stmt->bind_param("sdss", $item['name'], $item['price'], $item['img'], $item['description'], $item['customerID']);
 
     // Execute the prepared SQL statement
     if ($stmt->execute()) {

@@ -8,6 +8,7 @@
     <script src="Main.js"></script> 
 </head>
 <body>
+    <script src="path_to_your_js_file/customerID.js"></script>
     <div id="container">
         <?php include 'menu.php'; ?>
             <div>
