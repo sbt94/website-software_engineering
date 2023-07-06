@@ -13,10 +13,27 @@
         return;
     }
 
-    // Here you can implement your own logic to handle the reservation, e.g., send the data to a server.
-
-    alert('Reservation confirmed for ' + name + ' at ' + dateTime + ' for a party of ' + partySize);
-    document.getElementById('reservation-form').reset();
+    fetch('reserve_table.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            datetime: dateTime,
+            partySize: partySize,
+        }),
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        document.getElementById('reservation-form').reset();
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 });
 
 // Get the current date and time
@@ -36,5 +53,3 @@ var dateTimePicker = flatpickr(document.getElementById('date-time'), {
     time_24hr: true,
     minuteIncrement: 15,
 });
-
-

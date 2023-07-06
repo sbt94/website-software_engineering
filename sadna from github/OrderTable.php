@@ -13,7 +13,7 @@
         <div id="menu">
             <?php include 'menu.php'; ?>
     </div>
-    
+
     <div class="container">
             <h1>Restaurant Table Reservation</h1>
             <form id="reservation-form">
@@ -46,7 +46,7 @@
                 <input type="submit" value="Reserve">
             </form>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        <script src="js/OrderTable.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+        <script src="OrderTable.js"></script>
     </body>
 </html>
