@@ -14,9 +14,13 @@
         return;
     }
     
-    var jsonString = {"name":name,"email":email,"phone":phone,"datetime":dateTime,"partySize":partySize};
-    var data = JSON.parse(jsonString);
+    var data = {"name":name,"email":email,"phone":phone,"datetime":dateTime,"partySize":partySize};
     console.log(data);
+    
+    var jsonData = JSON.stringify(data);
+    console.log(jsonData);
+    
+    
 
     fetch('reserve_table.php', {
         method: 'POST',
