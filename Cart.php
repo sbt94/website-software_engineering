@@ -58,19 +58,23 @@
         .catch(error => console.error('Error:', error));
 
         function deleteItems() {
-    fetch("http://34.239.35.228/db_remove.php", {
+        fetch("http://34.239.35.228/db_remove.php", {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({customerID: customerID}),
     })
-            .then(response => response.text())
-            .then(data => console.log(data))
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        location.reload(); // This line will refresh the page.
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
      </script>
     </div>
   
