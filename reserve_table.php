@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 header('Access-Control-Allow-Origin: *');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -14,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $stmt = $conn->prepare("INSERT INTO reservations (name, email, phone, datetime, party_size) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO reservations (name, email, phone, datetime, partySize) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssi", $data['name'], $data['email'], $data['phone'], $data['datetime'], $data['partySize']);
 
     if ($stmt->execute()) {
