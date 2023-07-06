@@ -30,6 +30,13 @@
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('menu-item-text');
 
+            // Create an img element for each item
+            const imgElement = document.createElement('img');
+            imgElement.src = item.img;
+            imgElement.alt = item.name;
+            imgElement.classList.add('menu-item-img');
+            itemDiv.appendChild(imgElement);
+
             const nameElement = document.createElement('h3');
             nameElement.textContent = item.name;
             itemDiv.appendChild(nameElement);
@@ -41,6 +48,12 @@
             // append the item to the parent container
             menuContainer.appendChild(itemDiv);
             });
+
+            // Create and add a button to clear the cart
+            const clearButton = document.createElement('button');
+            clearButton.textContent = 'Clear Cart';
+            clearButton.addEventListener('click', deleteItems);
+            menuContainer.appendChild(clearButton);
         })
         .catch(error => console.error('Error:', error));
 
