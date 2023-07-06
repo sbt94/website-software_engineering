@@ -18,7 +18,8 @@
     <div id="menu">
      <!-- read from mysql database and display the cart items -->
      <script>
-        fetch('http://34.239.35.228/db_get.php')
+        var customerID = localStorage.getItem('customerID');
+        fetch(`http://34.239.35.228/db_get.php?customerID=${customerID}`)
         .then(response => response.json())
         .then(data => {
             // get a reference to the parent container where you want to append your items
