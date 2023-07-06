@@ -18,12 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
 
     $request = file_get_contents('php://input');
     $data = json_decode($request);
-    $name = $data->name;
+    $customerID = $data->customerID;
 
-    $sql = "DELETE FROM items;
+    $sql = "DELETE FROM orders WHERE customerID = ?";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $name);
+    $stmt->bind_param("s", $customerID);
 
     if ($stmt->execute()) {
         echo "Items deleted successfully.";
