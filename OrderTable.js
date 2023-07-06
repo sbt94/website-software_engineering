@@ -13,6 +13,10 @@
         alert('Please enter a valid phone number.');
         return;
     }
+    
+    var jsonString = {"name":name,"email":email,"phone":phone,"datetime":dateTime,"partySize":partySize};
+    var data = JSON.parse(jsonString);
+    console.log(data);
 
     fetch('reserve_table.php', {
         method: 'POST',
@@ -47,10 +51,10 @@ var roundedMinutes = Math.ceil(now.getMinutes() / 15) * 15;
 now.setMinutes(roundedMinutes);
 
 // Create flatpickr instance for date and time picker
-var dateTimePicker = flatpickr(document.getElementById('date-time'), {
-    enableTime: true,
-    minDate: now,
-    dateFormat: 'Y-m-d H:i',
-    time_24hr: true,
-    minuteIncrement: 15,
-});
+// var dateTimePicker = flatpickr(document.getElementById('date-time'), {
+//     enableTime: true,
+//     minDate: now,
+//     dateFormat: 'Y-m-d H:i',
+//     time_24hr: true,
+//     minuteIncrement: 15,
+// });
