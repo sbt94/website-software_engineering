@@ -19,6 +19,8 @@
      <!-- read from mysql database and display the cart items -->
      <script>
         var customerID = localStorage.getItem('customerID');
+        var totalCost = 0;
+
         fetch(`http://34.239.35.228/db_get.php?customerID=${customerID}`)
         .then(response => response.json())
         .then(data => {
@@ -47,13 +49,26 @@
 
             // append the item to the parent container
             menuContainer.appendChild(itemDiv);
+
+            totalCost += parseFloat(item.price);
             });
+
+            // Display the total cost
+            const totalCostElement = document.createElement('h2');
+            totalCostElement.textContent = `Total cost: $${totalCost.toFixed(2)}`;
+            menuContainer.appendChild(totalCostElement);
 
             // Create and add a button to clear the cart
             const clearButton = document.createElement('button');
             clearButton.textContent = 'Clear Cart';
             clearButton.addEventListener('click', deleteItems);
             menuContainer.appendChild(clearButton);
+
+            // Create and add a button to go to the reservation page
+            const reservationButton = document.createElement('button');
+            reservationButton.textContent = 'Make a Reservation';
+            reservationButton.addEventListener('click', () => window.location.href = 'reservation_page.html'); // replace 'reservation_page.html' with the actual path to your reservation page
+            menuContainer.appendChild(reservationButton);
         })
         .catch(error => console.error('Error:', error));
 
