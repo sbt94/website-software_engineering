@@ -7,11 +7,12 @@
                 <a href="Cart.php"><div class="image-container"><img src="css/cart.jpg" alt="cart" id="cart"><span class="image-text">Cart</span></div></a>
                 <a href="Menu.php"><div class="image-container"><img src="css/menu.jpg" alt="menu_" id="menu_"><span class="image-text">Menu</span></div></a>
                 <a href="Recommendations.php"><div class="image-container"><img src="css/Recommendations.jpg" alt="Recommendations" id="Recommendations"><span class="image-text">Recommendations</span></div></a>
+                <audio controls><source src="css/audio.mp3" type="audio/mpeg"></audio>
             </ul>
 
-            <audio autoplay loop hidden>
+            <!-- <audio controls>
                 <source src="css/audio.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
-        </audio>
+        </audio> -->
 
 </div>
