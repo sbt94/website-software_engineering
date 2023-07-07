@@ -11,7 +11,7 @@
   <script src="customerID.js"></script>
     <div id="container">
       <?php include 'menu.php'; ?>
-    </div>
+    
     <main class="container">
     <script>
       fetch('menu.json') 
