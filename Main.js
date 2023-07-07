@@ -21,6 +21,7 @@ function hideText(event) {
 }
 
 function clearText() {
+  console.log("Clearing text...");
   var nameBox = document.getElementById("enter-name-textbox");
   var phoneBox = document.getElementById("enter-phone-textbox");
   var emailBox = document.getElementById("enter-email-textbox");
