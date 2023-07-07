@@ -20,7 +20,7 @@ function hideText(event) {
   text.style.display = "none";
 }
 
-function clearText() {
+function SendText() {
   console.log("Clearing text...");
   var nameBox = document.getElementById("enter-name-textbox");
   var phoneBox = document.getElementById("enter-phone-textbox");
