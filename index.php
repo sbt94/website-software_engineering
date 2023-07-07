@@ -67,6 +67,7 @@
                 <label for="enter-file-textbox">enter your CV:</label>
                 <input type="file" id="enter-file-textbox" name="enter-file-textbox">
                 <button type="button" onclick="clearText()">Submit</button>
+                <div id="message"></div>
                 <p>Contact for more information: 972525442849</p>
                 <p>&copy; Nadav's diner 2023</p>
             </div>

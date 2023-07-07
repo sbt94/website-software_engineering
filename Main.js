@@ -21,10 +21,24 @@ function hideText(event) {
 }
 
 function clearText() {
-    document.getElementById("enter-name-textbox").value = "";
-    document.getElementById("enter-phone-textbox").value = "";
-    alert("Details submitted!");
-    document.write("Thank you for your submission!");
+  var nameBox = document.getElementById("enter-name-textbox");
+  var phoneBox = document.getElementById("enter-phone-textbox");
+  var emailBox = document.getElementById("enter-email-textbox");
+  
+  // Check if all textboxes are filled
+  if (nameBox.value.trim() === "" || phoneBox.value.trim() === "" || emailBox.value.trim() === "") {
+      alert("Please fill in all fields.");
+      return;  // exit the function
+  }
+
+  // If all fields are filled, clear them and display the submission message
+  nameBox.value = "";
+  phoneBox.value = "";
+  emailBox.value = "";
+  document.getElementById("message").innerHTML = "Thank you for your submission!";
+  alert("Details submitted!");
 }
+
+
 
 
