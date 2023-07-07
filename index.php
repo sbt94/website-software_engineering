@@ -9,9 +9,10 @@
 </head>
 <body>
     <script>
-        var person= window.prompt( "Please enter your name", "Nadav" );
-        If (person==null){
-            document.write(“User pressed cancel button”);}
+        var person = window.prompt("Please enter your name", "Nadav");
+        if (person == null){
+            document.write("User pressed cancel button");
+            }
     </script>
     <script src="customerID.js"></script>
     <div id="container">
