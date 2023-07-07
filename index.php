@@ -11,9 +11,9 @@
     <script>
         var person= window.prompt( "Please enter your name", "Nadav" );
         If (person==null){
-            document.write(“User pressed cancel button”)}
-    <script src="customerID.js"></script>
+            document.write(“User pressed cancel button”);}
     </script>
+    <script src="customerID.js"></script>
     <div id="container">
     <?php include 'menu.php'; ?>
             <div>
