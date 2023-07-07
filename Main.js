@@ -39,7 +39,7 @@ function SendText() {
   fileBox.value = "";
   console.log("Details submitted!");
   document.getElementById("message").innerHTML = "Thank you for your submission!";
-  alert("Details submitted!");
+  alert("Details submitted! Main.js out of");
 }
 
 
