@@ -5,18 +5,18 @@
     <meta name="Nadav's diner" content="width=device-width, initial-scale=1.0">
     <title>Nadav's diner</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="Main.js"></script> 
 </head>
 <body> <!--  onload="init();"> -->
-    <!-- <script>
-        var person = window.prompt("Please enter your name", "Nadav");
-        if (person == null){
-            document.write("User pressed cancel button");
-            }
-    </script> -->
+<!-- <script>
+    var person = window.prompt("Please enter your name", "Nadav");
+    if (person == null){
+        document.write("User pressed cancel button");
+    }
+</script> -->
+    <script src="Main.js"></script> 
     <script src="customerID.js"></script>
     <div id="container">
-    <?php include 'menu.php'; ?>
+        <?php include 'menu.php'; ?>
             <div>
                 <header>
                     <h1>Welcome to Nadav's Diner</h1>
