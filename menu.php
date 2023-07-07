@@ -9,7 +9,7 @@
                 <a href="Recommendations.php"><div class="image-container"><img src="css/Recommendations.jpg" alt="Recommendations" id="Recommendations"><span class="image-text">Recommendations</span></div></a>
             </ul>
 
-            <audio controls>
+            <audio autoplay loop hidden>
                 <source src="css/audio.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
         </audio>
