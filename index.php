@@ -46,7 +46,9 @@
 
                 <section>
                         <h2>Checkout our friends</h2>
-                        <p>The best Italian resturant: <a href="https://amoremio.co.il/">link</a></p>
+                        <p>The best Italian resturant: <b><a href="https://amoremio.co.il/">Amoremio TLV</a></b></p>
+                        <p>The best Burger resturant: <b><a href="https://www.burgus.co.il/">BBB TLV</a></b></p>
+                        <p>The best Asian resturant: <b><a href="https://www.japanika.net/">Japanika TLV</a></b></p>
                     </section>
 
             </div>
