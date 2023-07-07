@@ -8,7 +8,12 @@
     <script src="Main.js"></script> 
 </head>
 <body>
+    <script>
+        var person= window.prompt( "Please enter your name", "Nadav" );
+        If (person==null){
+            document.write(“User pressed cancel button”)}
     <script src="customerID.js"></script>
+    </script>
     <div id="container">
     <?php include 'menu.php'; ?>
             <div>
