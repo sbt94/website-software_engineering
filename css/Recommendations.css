@@ -1,0 +1,58 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url("3.jepg") no-repeat center center fixed;
+    background-size: cover;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Updated semi-transparent background color on hover */
+}
+
+#recommendations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recommendations-list li {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#recommendations-list li:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 1);
+}
+
+#recommendations-list li .stars {
+    display: flex;
+}
+
+#recommendations-list li .stars span {
+    font-size: 20px;
+    color: gold;
+    margin-right: 5px;
+}
+
+#add-recommendation-form {
+    margin-top: 20px;
+}
