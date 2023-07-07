@@ -43,6 +43,12 @@
                     <p>So explore our site, get to know us, and when you're ready, book a table. We can't wait to serve you.</p>
                     <p>Welcome to Nadav's Diner. Welcome to a celebration of good food and good times.</p>
                 </footer>
+
+                <section>
+                        <h2>Checkout our friends</h2>
+                        <p>The best Italian resturant: <a href="https://amoremio.co.il/">link</a></p>
+                    </section>
+
             </div>
             <div id="footer">
                 <h4>We're hiring!</h4>

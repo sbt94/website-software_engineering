@@ -50,7 +50,6 @@
                 <input type="submit" value="Reserve">
             </form>
         </div>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
         <script src="OrderTable.js"></script>
     </body>
 </html>
