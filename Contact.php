@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nadav's Diner - Contact Us</title>
+    <meta name="Nadav's diner" content="width=device-width, initial-scale=1.0">
+    <title>Nadav's diner</title>
     <link rel="stylesheet" type="text/css" href="css/ContactUs.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="Main.js"></script> 
 </head>
 <body>
+    <script src="customerID.js"></script>
     <div id="container">
-        <?php include 'menu.php'; ?>
-    </div>
+    <?php include 'menu.php'; ?>
     <div class="container">
 
 
