@@ -13,8 +13,7 @@
         document.write("User pressed cancel button");
     }
 </script> -->
-    <script src="Main.js"></script> 
-    <script src="customerID.js"></script>
+
     <div id="container">
         <?php include 'menu.php'; ?>
             <div>
@@ -73,5 +72,7 @@
             </div>
         </div>
     </div>
+    <script src="Main.js"></script> 
+    <script src="customerID.js"></script>
 </body>
 </html>
