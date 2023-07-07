@@ -16,7 +16,8 @@
     </script> -->
     <script src="customerID.js"></script>
     <div id="container">
-    <?php include 'menu.php'; ?>
+      <?php include 'menu.php'; ?>
+    </div>
             <div>
                 <header>
                     <h1>Welcome to Nadav's Diner</h1>
