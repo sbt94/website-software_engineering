@@ -24,23 +24,24 @@ function clearText() {
   console.log("Clearing text...");
   var nameBox = document.getElementById("enter-name-textbox");
   var phoneBox = document.getElementById("enter-phone-textbox");
-  var emailBox = document.getElementById("enter-email-textbox");
-  
+  var fileBox = document.getElementById("enter-file-textbox");
+
   // Check if all textboxes are filled
-  if (nameBox.value.trim() === "" || phoneBox.value.trim() === "" || emailBox.value.trim() === "") {
+  if (nameBox.value.trim() === "" || phoneBox.value.trim() === "" || fileBox.value.trim() === "") {
       alert("Please fill in all fields.");
       console.log("Please fill in all fields.");
       return;  // exit the function
   }
 
   // If all fields are filled, clear them and display the submission message
-  nameBox.value = "";
+  nameBox.value = "Thank you for your submission!";
   phoneBox.value = "";
-  emailBox.value = "";
+  fileBox.value = "";
   console.log("Details submitted!");
   document.getElementById("message").innerHTML = "Thank you for your submission!";
   alert("Details submitted!");
 }
+
 
 
 
