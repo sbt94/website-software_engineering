@@ -24,6 +24,7 @@ function clearText() {
     document.getElementById("enter-name-textbox").value = "";
     document.getElementById("enter-phone-textbox").value = "";
     alert("Details submitted!");
+    document.write("Thank you for your submission!");
 }
 
 
