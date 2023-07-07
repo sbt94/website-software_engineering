@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="Main.js"></script> 
 </head>
-<body onload="init();">
+<body> <!--  onload="init();"> -->
     <!-- <script>
         var person = window.prompt("Please enter your name", "Nadav");
         if (person == null){
