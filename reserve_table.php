@@ -62,6 +62,6 @@ try{
         $conn->close();
     }
 } catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    error_log($e->getMessage(), 3, "../error_log.txt");
 }
 ?>
