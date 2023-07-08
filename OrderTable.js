@@ -54,11 +54,3 @@ var roundedMinutes = Math.ceil(now.getMinutes() / 15) * 15;
 // Adjust the current time by rounding down the minutes
 now.setMinutes(roundedMinutes);
 
-// Create flatpickr instance for date and time picker
-// var dateTimePicker = flatpickr(document.getElementById('date-time'), {
-//     enableTime: true,
-//     minDate: now,
-//     dateFormat: 'Y-m-d H:i',
-//     time_24hr: true,
-//     minuteIncrement: 15,
-// });
