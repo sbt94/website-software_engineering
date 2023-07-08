@@ -1,5 +1,4 @@
 <?php
-try{
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -60,8 +59,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
     $conn->close();
-}
-} catch (Exception $e) {
-    error_log($e->getMessage(), 3, "error_log.txt");
-}
 ?>
