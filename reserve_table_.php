@@ -32,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Server settings
             $mail->SMTPDebug = 2; // Enable verbose debug output
             $mail->isSMTP(); // Set mailer to use SMTP
-            $mail->Host = 'in-v3.mailjet.com'; // Specify main and backup SMTP servers
+            $mail->Host = 'email-smtp.us-east-1.amazonaws.com'; // Specify main and backup SMTP servers
             $mail->SMTPAuth = true; // Enable SMTP authentication
-            $mail->Username = '1aedf9c6d61d782bafbe969bdf7f0c56'; // SMTP username
-            $mail->Password = 'c361f77d031c770733ec28ea9e2146ed'; // SMTP password
+            $mail->Username = 'AKIASOZNQXQYNF5ZZR3H'; // SMTP username
+            $mail->Password = 'BCKSTh3Zt9QsVK5kxAk3m2r3Ehuut47hSG2o/i7G40KR'; // SMTP password
             $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587; // TCP port to connect to
 
