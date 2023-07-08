@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 header('Access-Control-Allow-Origin: *');
 
-require 'vendor/autoload.php'; // Include Composer's autoloader
+require '../vendor/autoload.php';// Include Composer's autoloader
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
