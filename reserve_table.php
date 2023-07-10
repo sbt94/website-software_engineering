@@ -34,13 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP(); // Set mailer to use SMTP
             $mail->Host = 'in-v3.mailjet.com'; // Specify main and backup SMTP servers
             $mail->SMTPAuth = true; // Enable SMTP authentication
-            $mail->Username = '1aedf9c6d61d782bafbe969bdf7f0c56'; // SMTP username
-            $mail->Password = 'c361f77d031c770733ec28ea9e2146ed'; // SMTP password
+            $mail->Username = '354c4d4e55597812f68d2c7f9a829dc5'; // SMTP username
+            $mail->Password = '4900d1056cccdcfe6a3ceaaacf94069d'; // SMTP password
             $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587; // TCP port to connect to
 
             //Recipients
-            $mail->setFrom('s33980570@gmail.com', 'Mailer');
+            $mail->setFrom('nadav_res@mail.com', 'Mailer');
             $mail->addAddress($data['email'], $data['name']); // Add a recipient
 
             //Content
