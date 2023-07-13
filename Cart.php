@@ -16,7 +16,12 @@
 
 
     <div id="menu">
-     <!-- read from mysql database and display the cart items -->
+    <?php
+    if (isset($_GET['message'])) {
+        echo '<p>' . htmlspecialchars($_GET['message']) . '</p>';
+    }
+    ?> 
+    <!-- read from mysql database and display the cart items -->
      <script>
         var customerID = localStorage.getItem('customerID');
         var totalCost = 0;
@@ -67,7 +72,7 @@
             // Create and add a button to go to the reservation page
             const reservationButton = document.createElement('button');
             reservationButton.textContent = 'Make a Reservation';
-            reservationButton.addEventListener('click', () => window.location.href = 'reservation_page.php'); // replace 'reservation_page.html' with the actual path to your reservation page
+            reservationButton.addEventListener('click', () => window.location.href = 'reservation_page.php'); 
             menuContainer.appendChild(reservationButton);
         })
         .catch(error => console.error('Error:', error));
