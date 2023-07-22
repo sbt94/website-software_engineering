@@ -7,12 +7,15 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body> <!--  onload="init();"> -->
-<!-- <script>
+<script>
     var person = window.prompt("Please enter your name", "Nadav");
     if (person == null){
         document.write("User pressed cancel button");
     }
-</script> -->
+    else{
+        document.write("Hello " + person + "! How are you today?");
+    }
+</script>
 
     <div id="container">
         <?php include 'menu.php'; ?>
